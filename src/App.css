@@ -1,38 +1,138 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+
+body {
+  background-color: #f6eee5;
+  font-family: 'Nanum Myeongjo';
+
+}
+
+/* App container styling */
+.app-container {
+  width: 100%;
+  /* Take full width by default */
+  max-width: 600px;
+  /* Set a max width for the container */
+  margin: 0 auto;
+  /* Center the container horizontally */
+  margin-top: 15%;
+}
+
+.responsive-image {
+  width: 100%;
+  /* Make the image span the full width of the container */
+  height: auto;
+  /* Maintain the aspect ratio of the image */
+  object-fit: cover;
+  /* Ensure the image covers the area */
+  /* Adjust this if needed based on the title's height */
+  display: block;
+  /* Make sure it behaves like a block-level element */
+  margin: 0 auto;
+  /* Center the image horizontally if needed */
+  margin-bottom: 0px;
+}
+
+.title {
+  background-color: #539b52;
+  color: white;
+  padding: 10px 0 10px 20px;
+  border-radius: 20px 0 0 0;
+  font-size: 2em;
+}
+
+.flex-form {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f7f2ec;
+  border-radius: 0 0 20px 0;
+}
+
+.flex-form>* {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+  /* Ensures padding and border are included in the width */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  background-color: #f7f2ec;
+  font-family: 'Nanum Myeongjo';
+  font-size: 18px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 600px) {
+  .flex-container>* {
+    flex: 1 1 100%;
+    /* One item per row on small screens */
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.calculate-button {
+  background-color: #E6973B;
   color: white;
+  font-family: 'Nanum Myeongjo';
+  padding: 10px 0 10px 0;
+  font-size: 2em;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px 0 20px 0;
+  transition: background-color 0.3s ease;
+  font-style: italic;
 }
 
-.App-link {
-  color: #61dafb;
+.calculate-button:hover {
+  background-color: #539b52;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+/* For Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+input {
+  border: none;
+  /* Remove the border */
+  /* outline: none; */
+  /* Remove the focus outline */
+  /* padding: 8px; */
+  /* Optional: Add some padding to make the input boxes look better */
+  /* box-shadow: none; */
+  /* Remove any shadow */
+}
+
+input:focus {
+  outline: none;
+  /* Remove the outline when the input is focused */
+  color: #539b52
+}
+
+.calculate-results {
+  text-align: center;
+  background-color: #362c2b;
+  color: white;
+  /* margin-top: -20px; */
+  border-radius: 0 20px 0 20px;
+  padding: 10px 0 10px 0;
+  height: 163px;
+
+  /* Set the background image */
+  background-image: url('/public/footer-icon1.png');
+  background-position: bottom left;
+  /* Position the image at the bottom left */
+  background-repeat: no-repeat;
+  /* Prevent the image from repeating */
+  background-size: 35%;
+  /* Adjust the size of the background image */
 }
