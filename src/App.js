@@ -148,7 +148,7 @@ const App = () => {
   return (
     <div className="app-container">
       <div className="title">
-        AFK Journey Calc
+        AFK Journey Calculator
       </div>
       <img
         src="/detail-footer.jpg"
