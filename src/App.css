@@ -4,7 +4,13 @@
 body {
   background-color: #352513;
   font-family: 'Nanum Myeongjo';
-
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
 }
 
 /* App container styling */
@@ -15,7 +21,6 @@ body {
   /* Set a max width for the container */
   margin: 0 auto;
   /* Center the container horizontally */
-  margin-top: 15%;
 }
 
 .responsive-image {
@@ -54,21 +59,24 @@ body {
   box-sizing: border-box;
   /* Ensures padding and border are included in the width */
   text-align: center;
+  margin: 0px;
+  padding: 12px 0 12px 0;
 }
 
 input {
   background-color: #2f2314;
   color: white;
   font-family: 'Nanum Myeongjo';
-  font-size: 18px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
-@media (max-width: 600px) {
-  .flex-container>* {
-    flex: 1 1 100%;
-    /* One item per row on small screens */
-  }
+.input {
+  box-sizing: border-box;
+}
+
+input {
+  min-width: 0;
 }
 
 .calculate-button {
@@ -87,8 +95,6 @@ input {
 .calculate-button:hover {
   background-color: #539b52;
 }
-
-
 
 /* For Chrome, Safari, Edge, and Opera */
 input[type="number"]::-webkit-inner-spin-button,
@@ -124,7 +130,6 @@ input:focus {
   text-align: center;
   background-color: #362c2b;
   color: white;
-  /* margin-top: -20px; */
   border-radius: 0 20px 0 20px;
   padding: 10px 0 10px 0;
   height: 163px;
