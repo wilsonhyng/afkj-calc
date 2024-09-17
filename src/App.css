@@ -155,3 +155,22 @@ input:focus {
     /* Allow scrolling on desktop */
   }
 }
+
+@media (max-width: 767px) {
+
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+    /* Prevent scrolling */
+  }
+
+  .app-container {
+    position: fixed;
+    /* Keep it fixed on the viewport */
+    top: 0;
+    left: 0;
+    height: 100vh;
+    /* Ensure full viewport height */
+  }
+}
