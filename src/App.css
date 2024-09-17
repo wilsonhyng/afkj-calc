@@ -9,8 +9,6 @@ body {
   display: flex;
   justify-content: center;
   /* Center horizontally */
-  align-items: center;
-  /* Center vertically */
 }
 
 /* App container styling */
@@ -142,4 +140,18 @@ input:focus {
   /* Prevent the image from repeating */
   background-size: 35%;
   /* Adjust the size of the background image */
+}
+
+@media (min-width: 768px) {
+
+  html,
+  body {
+    display: flex;
+    align-items: center;
+    /* Center vertically on desktop */
+    justify-content: center;
+    /* Center horizontally on desktop */
+    overflow: auto;
+    /* Allow scrolling on desktop */
+  }
 }
