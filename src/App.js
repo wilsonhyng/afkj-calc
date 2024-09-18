@@ -167,16 +167,6 @@ const App = () => {
               handleInputFocus("goldPerHour");
             }}
             required />
-          <h2>Essence / day:</h2>
-          <input
-            id="essencePerDay"
-            type="number"
-            value={essencePerDayInput}
-            onChange={(e) => {
-              setEssencePerDayInput(e.target.value);
-              handleInputFocus("essencePerDay");
-            }}
-            required />
           <h2>XP / hour:</h2>
           <input
             id="xpPerHour"
@@ -185,6 +175,16 @@ const App = () => {
             onChange={(e) => {
               setXpPerHourInput(e.target.value);
               handleInputFocus("xpPerHour");
+            }}
+            required />
+          <h2>Essence / day:</h2>
+          <input
+            id="essencePerDay"
+            type="number"
+            value={essencePerDayInput}
+            onChange={(e) => {
+              setEssencePerDayInput(e.target.value);
+              handleInputFocus("essencePerDay");
             }}
             required />
           <h2>Current Essence:</h2>
@@ -210,10 +210,10 @@ const App = () => {
           <button type="submit" className="calculate-button">Calculate</button>
         </form>
         <div className="calculate-results">
-        <h2>{result ? 'You will level in' : ''}</h2>
-        <h2>{result ? countdown : ''}</h2>
-        <h2>{result ? `at ${result.formattedFutureTime}` : ''}</h2>
-      </div>
+          <h2>{result ? 'You will level in' : ''}</h2>
+          <h2>{result ? countdown : ''}</h2>
+          <h2>{result ? `at ${result.formattedFutureTime}` : ''}</h2>
+        </div>
       </div>
     </div>
   );
