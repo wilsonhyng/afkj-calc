@@ -183,6 +183,7 @@ const App = () => {
         <input
           id="essencePerDay"
           type="number"
+          placeholder="___________"
           value={essencePerDayInput}
           onChange={(e) => {
             setEssencePerDayInput(e.target.value);
@@ -193,6 +194,7 @@ const App = () => {
         <input
           id="currentEssence"
           type="number"
+          placeholder="___________"
           value={currentEssenceInput}
           onChange={(e) => {
             setCurrentEssenceInput(e.target.value);
@@ -203,6 +205,7 @@ const App = () => {
         <input
           id="totalEssence"
           type="number"
+          placeholder="___________"
           value={totalEssenceInput}
           onChange={(e) => {
             setTotalEssenceInput(e.target.value);
