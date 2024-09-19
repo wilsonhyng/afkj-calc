@@ -19,6 +19,9 @@ body {
   /* Set a max width for the container */
   margin: 0 auto;
   /* Center the container horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .responsive-image {
