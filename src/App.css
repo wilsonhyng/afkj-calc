@@ -82,6 +82,11 @@ input {
   min-width: 0;
 }
 
+
+#currentEssence {
+  color: #ea8e5a;
+}
+
 .calculate-button {
   background-color: #E6973B;
   color: white;
