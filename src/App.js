@@ -1,22 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-
-// refactor this to two functions
-
-// one function to calculate results
-
-// another function to format time
-
-
-
 const calculateResults = (goldPerHourInput, essencePerDayInput, xpPerHourInput, currentEssenceInput, totalEssenceInput) => {
   const minutes = ((parseFloat(totalEssenceInput) - parseFloat(currentEssenceInput)) / (parseFloat(essencePerDayInput) / 24) * 60);
 
-  // can keep this minutes variable
-  // do this above calc for gold and xp
-  // take the largest value and set it to minutes
-
+  // current function only calculates essence
+  // new season might not have an issue where gold and xp are limiting factors
 
   const hours = Math.floor(minutes / 60);
   const remainingMinutes = Math.floor(minutes % 60);
@@ -63,6 +52,7 @@ const App = () => {
     localStorage.setItem("lastFocusedInput", inputId);
   };
 
+  // useEffect for fetching localStorage data
   useEffect(() => {
     const savedGoldPerHourInput = localStorage.getItem('goldPerHourInput');
     const savedCurrentGoldInput = localStorage.getItem('currentGoldInput');
@@ -75,8 +65,6 @@ const App = () => {
     const savedXpPerHourInput = localStorage.getItem('xpPerHourInput');
     const savedCurrentXpInput = localStorage.getItem('currentXpInput');
     const savedTotalXpInput = localStorage.getItem('totalXpInput');
-
-
 
     if (savedGoldPerHourInput) setGoldPerHourInput(savedGoldPerHourInput);
     if (savedCurrentGoldInput) setCurrentGoldInput(savedCurrentGoldInput);
@@ -102,10 +90,9 @@ const App = () => {
     if (inputElement) {
       inputElement.focus();
     }
-
-
   }, []);
 
+  // useEffect for countdown timer
   useEffect(() => {
     if (result) {
       const interval = setInterval(() => {
@@ -128,6 +115,7 @@ const App = () => {
     }
   }, [result]);
 
+  // useEffect for saving input to local storage
   useEffect(() => {
     localStorage.setItem('goldPerHourInput', goldPerHourInput);
     localStorage.setItem('currentGoldInput', currentGoldInput);
