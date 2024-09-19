@@ -1,16 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-
-// const calculateResults = (essencePerDayInput, currentEssenceInput, totalEssenceInput) => {
-//   console.log('Essence a day', essencePerDayInput);
-//   console.log('Current Essence ', currentEssenceInput);
-//   console.log('Total Essence ', totalEssenceInput);
-
-//   return ((parseFloat(totalEssenceInput) - parseFloat(currentEssenceInput)) / (parseFloat(essencePerDayInput) / 24) * 60);
-// };
-
-
 const calculateResults = (goldPerHourInput, essencePerDayInput, xpPerHourInput, currentEssenceInput, totalEssenceInput) => {
   const minutes = ((parseFloat(totalEssenceInput) - parseFloat(currentEssenceInput)) / (parseFloat(essencePerDayInput) / 24) * 60);
 
@@ -36,7 +26,6 @@ const calculateResults = (goldPerHourInput, essencePerDayInput, xpPerHourInput, 
     formattedFutureTime
   };
 };
-
 
 const App = () => {
   const [goldPerHourInput, setGoldPerHourInput] = useState('');
@@ -157,7 +146,7 @@ const App = () => {
       />
       <div>
         <form className="flex-form" onSubmit={handleSubmit}>
-          <h2>Gold / hr:</h2>
+          <h2>Gold / hour:</h2>
           <input
             id="goldPerHour"
             type="number"
@@ -166,7 +155,7 @@ const App = () => {
               setGoldPerHourInput(e.target.value);
               handleInputFocus("goldPerHour");
             }}
-            required />
+          />
           <h2>XP / hour:</h2>
           <input
             id="xpPerHour"
@@ -176,7 +165,7 @@ const App = () => {
               setXpPerHourInput(e.target.value);
               handleInputFocus("xpPerHour");
             }}
-            required />
+          />
           <h2>Essence / day:</h2>
           <input
             id="essencePerDay"
