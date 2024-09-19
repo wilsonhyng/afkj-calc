@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
-
 body {
   background-color: #352513;
   font-family: 'Nanum Myeongjo';
@@ -82,11 +81,6 @@ input {
   min-width: 0;
 }
 
-
-#currentEssence {
-  color: #ea8e5a;
-}
-
 .calculate-button {
   background-color: #E6973B;
   color: white;
@@ -102,30 +96,6 @@ input {
 
 .calculate-button:hover {
   background-color: #539b52;
-}
-
-/* For Chrome, Safari, Edge, and Opera */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* For Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-
-input {
-  border: none;
-  /* Remove the border */
-  /* outline: none; */
-  /* Remove the focus outline */
-  /* padding: 8px; */
-  /* Optional: Add some padding to make the input boxes look better */
-  /* box-shadow: none; */
-  /* Remove any shadow */
 }
 
 input:focus {
@@ -150,6 +120,29 @@ input:focus {
   /* Prevent the image from repeating */
   background-size: 35%;
   /* Adjust the size of the background image */
+}
+
+/* For Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input {
+  border: none;
+  /* Remove the border */
+  /* outline: none; */
+  /* Remove the focus outline */
+  /* padding: 8px; */
+  /* Optional: Add some padding to make the input boxes look better */
+  /* box-shadow: none; */
+  /* Remove any shadow */
 }
 
 @media (min-width: 768px) {
