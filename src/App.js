@@ -1,8 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+
+// refactor this to two functions
+
+// one function to calculate results
+
+// another function to format time
+
+
+
 const calculateResults = (goldPerHourInput, essencePerDayInput, xpPerHourInput, currentEssenceInput, totalEssenceInput) => {
   const minutes = ((parseFloat(totalEssenceInput) - parseFloat(currentEssenceInput)) / (parseFloat(essencePerDayInput) / 24) * 60);
+
+  // can keep this minutes variable
+  // do this above calc for gold and xp
+  // take the largest value and set it to minutes
+
 
   const hours = Math.floor(minutes / 60);
   const remainingMinutes = Math.floor(minutes % 60);
@@ -144,9 +158,8 @@ const App = () => {
         alt="AFK Journey"
         className="responsive-image"
       />
-      <div>
-        <form className="flex-form" onSubmit={handleSubmit}>
-          {/* <h2>Gold / hour:</h2>
+      <form className="flex-form" onSubmit={handleSubmit}>
+        {/* <h2>Gold / hour:</h2>
           <input
             id="goldPerHour"
             type="number"
@@ -166,43 +179,42 @@ const App = () => {
               handleInputFocus("xpPerHour");
             }}
           /> */}
-          <h2>Essence / day:</h2>
-          <input
-            id="essencePerDay"
-            type="number"
-            value={essencePerDayInput}
-            onChange={(e) => {
-              setEssencePerDayInput(e.target.value);
-              handleInputFocus("essencePerDay");
-            }}
-            required />
-          <h2>Current Essence:</h2>
-          <input
-            id="currentEssence"
-            type="number"
-            value={currentEssenceInput}
-            onChange={(e) => {
-              setCurrentEssenceInput(e.target.value);
-              handleInputFocus("currentEssence");
-            }}
-            required />
-          <h2>Total Essence:</h2>
-          <input
-            id="totalEssence"
-            type="number"
-            value={totalEssenceInput}
-            onChange={(e) => {
-              setTotalEssenceInput(e.target.value);
-              handleInputFocus("totalEssence");
-            }}
-            required />
-          <button type="submit" className="calculate-button">Calculate</button>
-        </form>
-        <div className="calculate-results">
-          <h2>{result ? 'You will level in' : ''}</h2>
-          <h2>{result ? countdown : ''}</h2>
-          <h2>{result ? `at ${result.formattedFutureTime}` : ''}</h2>
-        </div>
+        <h2>Essence / day:</h2>
+        <input
+          id="essencePerDay"
+          type="number"
+          value={essencePerDayInput}
+          onChange={(e) => {
+            setEssencePerDayInput(e.target.value);
+            handleInputFocus("essencePerDay");
+          }}
+          required />
+        <h2>Current Essence:</h2>
+        <input
+          id="currentEssence"
+          type="number"
+          value={currentEssenceInput}
+          onChange={(e) => {
+            setCurrentEssenceInput(e.target.value);
+            handleInputFocus("currentEssence");
+          }}
+          required />
+        <h2>Total Essence:</h2>
+        <input
+          id="totalEssence"
+          type="number"
+          value={totalEssenceInput}
+          onChange={(e) => {
+            setTotalEssenceInput(e.target.value);
+            handleInputFocus("totalEssence");
+          }}
+          required />
+        <button type="submit" className="calculate-button">Calculate</button>
+      </form>
+      <div className="calculate-results">
+        <h2>{result ? 'You will level in' : ''}</h2>
+        <h2>{result ? countdown : ''}</h2>
+        <h2>{result ? `at ${result.formattedFutureTime}` : ''}</h2>
       </div>
     </div>
   );
