@@ -146,7 +146,7 @@ const App = () => {
       />
       <div>
         <form className="flex-form" onSubmit={handleSubmit}>
-          <h2>Gold / hour:</h2>
+          {/* <h2>Gold / hour:</h2>
           <input
             id="goldPerHour"
             type="number"
@@ -165,7 +165,7 @@ const App = () => {
               setXpPerHourInput(e.target.value);
               handleInputFocus("xpPerHour");
             }}
-          />
+          /> */}
           <h2>Essence / day:</h2>
           <input
             id="essencePerDay"
